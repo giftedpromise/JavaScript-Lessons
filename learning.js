@@ -103,3 +103,91 @@ var titleCaseOver;
 studlyCapVar = 10;
 properCamelCase = "A string";
 titleCaseOver = 9000;
+
+//Adding Numbers
+
+var sum = 10 + 10;
+console.log(sum);
+
+//Subtracting Numbers
+
+var difference = 45 - 30;
+
+//Multiplying Numbers
+var product = 8 * 10;
+
+//Dividing Numbers
+var quotient = 66 / 3;
+
+//Incrementing Numbers is adding 1 to variable.
+var myVar = 87;
+myVar = myVar + 1;
+//2nd method
+myVar++;
+console.log(myVar);
+
+//Decrementing Number is subtracting 1 from the variables
+var myVar = 12;
+myVar = myVar - 1;
+console.log(myVar);
+//2nd method
+myVar--;
+
+//Decimal Number: it is also refers to as floating point numbers or float.
+var ourDecimal = 5.7;
+
+//Multiplying decimal point numbers
+var product = 0.45 * 0.345;
+
+//Dividing decimal point numbers
+var quotient = 4.4 / 2.0;
+
+//Finding reminder
+var reminder;
+reminder = 11 % 3;
+console.log(reminder);
+
+//Compound Assignment with augmented addition
+//first method
+a = 12 + a;
+b = 9 + b;
+c = c + 7;
+
+var a = 3;
+var b = 17;
+var c = 12;
+
+//2nd method
+a += 12;
+b += 9;
+c += 7;
+
+console.log(b);
+
+//Compound Assignment with augmented subtraction
+var a = 11;
+var b = 9;
+var c = 3;
+
+a = a - 6;
+b = b - 15;
+c = c - 1;
+
+a -= 6;
+b -= 15;
+c -= 1;
+
+//Compound Assignment with augmented multiplication
+var a = 5;
+var b = 12;
+var c = 4.6;
+
+a = a * 5;
+b = b * 3;
+c = c * 10;
+
+a *= 5;
+b *= 3;
+c *= 10;
+
+console.log(b);
