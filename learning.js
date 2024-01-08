@@ -312,3 +312,168 @@ console.log(lastLetterOfLastName);
 
 var lastLetterOfLastName = lastName[lastName.length - 3];
 console.log(lastLetterOfLastName);
+
+//Word blanks
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  var result = "";
+  result +=
+    "The " +
+    myAdjective +
+    " " +
+    myNoun +
+    " " +
+    myVerb +
+    " to the store " +
+    myAdjective +
+    ".";
+
+  return result;
+}
+
+console.log(wordBlanks("dogs", "big", "ran", "quickly"));
+console.log(wordBlanks("bike", "slow", "flew", "slowly"));
+
+//Store multiple values with arrays
+// An array is a special variable, which can hold more than one value:
+const cars = ["Saab", "Volvo", "BMW"];
+//An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+var ourArray = ["John", 23];
+var myArray = ["Promise", 20, "Love"];
+
+//Nested Array
+
+/* Nested Array in JavaScript is defined as Array (Outer array) within another array (inner array). An Array can have one or more inner Arrays. These nested array (inner arrays) are under the scope of outer array means we can access these inner array elements based on outer array object name. */
+
+var ourArray = [
+  ["the universe", 42],
+  ["everything", 10003],
+];
+
+var myArray = [
+  ["Promise", 32],
+  ["Chisom", 1.5],
+];
+
+//Access Array Data with Indexes
+
+var ourArray = [50, 60, 70];
+var ourData = ourArray[0];
+
+//Example 2
+
+var myArray = ["Promise", "Ishaku", "Chisom", "Mummy"];
+var myData = myArray[3];
+console.log(myData);
+
+//Modify Array Data with Indexes
+var ourArray = [18, 64, 99];
+ourArray[1] = 45;
+console.log(ourArray);
+//Example 2
+var myArray = ["Pawpaw", "Mango", "Orange", "Banana"];
+myArray[2] = "Apple";
+console.log(myArray);
+
+//Access Multi-Dimensional Arrays with Indexes
+var myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [10, 11, 12],
+  [13, 14, 15],
+];
+var myData = myArray[0][0];
+console.log(myData);
+
+var myData = myArray[3][2];
+console.log(myData);
+
+//Manipulate Arrays with push(): push is to add
+var ourArray = ["Stimpson", "J", "Cat"];
+ourArray.push(["happy", "joy"]);
+console.log(ourArray);
+
+//2nd example
+
+var myArray = [
+  ["John", 23],
+  ["cat", 3],
+];
+myArray.push(["Chisom", "Daddy", 12]);
+console.log(myArray);
+
+//Manipulate Arrays with pop(): pop is to subtract
+var ourArray = [1, 2, 3];
+var removedFromOurArray = ourArray.pop();
+console.log(ourArray);
+
+//2nd Example
+
+var myArray = [
+  ["John", 30],
+  ["cat", 20],
+];
+var removedFromMyArray = myArray.pop();
+console.log(myArray);
+
+//Manipulate Arrays with shift(): the shift function is very similar to the pop function except that it removes the first element of the array instead of the last element.
+var ourArray = ["John", "J", ["CAT"]];
+var removedFromOurArray = ourArray.shift();
+console.log(ourArray);
+
+//2nd Example
+var myArray = [
+  ["John", 30],
+  ["cat", 20],
+];
+
+var removedFromMyArray = myArray.shift();
+console.log(myArray);
+
+//Manipulate Arrays with unshift(): the unshift function is similar to the push function. Push add an element to the end of the array while unshift add element to the beginning of the array.
+var ourArray = ["Stimpson", "J", "CAT"];
+ourArray.shift();
+ourArray.unshift("Happy");
+console.log(ourArray);
+
+//2nd Example
+var myArray = [
+  ["John", 30],
+  ["cat", 20],
+];
+myArray.shift();
+myArray.unshift(["James", 32]);
+console.log(myArray);
+
+//shopping list
+var myList = [
+  ["Cereal", 2],
+  ["Milo", 3],
+  ["Milk", 4],
+  ["Soap", 2],
+  ["Bread", 2],
+  ["shoes", 2],
+  ["Books", 5],
+];
+
+//Writing Reusable Code with Fuctions- Functions allows us to create reusable codes in JavaScript.
+function ourReusableFunction() {
+  console.log("Heyya, world");
+}
+
+ourReusableFunction();
+
+//2nd example
+function myReusableFunction() {
+  console.log("Hi, worldxcode");
+}
+
+myReusableFunction();
+
+//Passing values with function with arguements
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+ourFunctionWithArgs(10, 5);
