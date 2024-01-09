@@ -587,3 +587,270 @@ var testArr = [1, 2, 3, 4, 5];
 console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
+
+//Boolean Values are data types in Js. They are true or false
+
+function welcomeToBooleans() {
+  return true;
+}
+
+//Use Conditional logic with If Statement
+
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) {
+    return "yes, it's true";
+  }
+  return "No, it is false";
+}
+
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue) {
+    return "Yes, that was true";
+  }
+  return "No, it was false";
+}
+console.log(trueOrFalse(false));
+
+//Comparison with equality Operator
+
+function testEqual(val) {
+  if (val == 12) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(testEqual(10));
+
+//Comparison with the strict equality Operator
+
+function testStrict(val) {
+  if (val === 7) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(testStrict(10));
+
+/* 
+3 === 3 - True
+3 === "3" -false
+
+*/
+
+function schoolName(name) {
+  if (name === "Promise") {
+    return "True";
+  }
+
+  return "false";
+}
+
+console.log(schoolName("Promise"));
+
+//Practice comparing different value
+
+function compareEquality(a, b) {
+  if (a === b) {
+    return "Equal";
+  }
+
+  return "Not Equal";
+}
+
+console.log(compareEquality(10, "10"));
+
+//Comparison with inequality Operator
+
+function testNotEqual(val) {
+  if (val != 99) {
+    return "Not Equal";
+  }
+
+  return "Equal";
+}
+
+console.log(testNotEqual(10));
+
+//Comparison with the strict inequality Operator
+
+function testStrictNotEqual(val) {
+  if (val !== 17) {
+    return "Not Equal";
+  }
+
+  return "Equal";
+}
+
+console.log(testStrictNotEqual(10));
+
+//Comparison with the Logical and Operator
+
+function testGreaterThan(val) {
+  if (val > 100) {
+    return "Over 100";
+  }
+
+  if (val > 10) {
+    return "10 0r Under";
+  }
+}
+
+console.log(testGreaterThan(15));
+
+//Comparison with the Greater than or equal to Operator
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {
+    return "20 or over";
+  }
+
+  if (val >= 10) {
+    return "10 or over";
+  }
+}
+
+console.log(testGreaterOrEqual(15));
+
+//Comparison with the Less than Operator
+
+function testLessThan(val) {
+  if (val < 10) {
+    return "value under 10";
+  }
+
+  if (val < 50) {
+    return "value under 50";
+  }
+  return "value over 50";
+}
+console.log(testLessThan(60));
+
+//Comparison with the less than or equal to Operator
+
+function testlessOrEqual(val) {
+  if (val <= 20) {
+    return "samaller than or equal to 20";
+  }
+
+  if (val <= 40) {
+    return "smaller than or equal to 40";
+  }
+
+  return "more than 40";
+}
+
+console.log(testlessOrEqual(50));
+
+//Comparison with the logical and operator
+
+//1st method
+function testLogicalAnd(val) {
+  if (val <= 50) {
+    if (val >= 25) {
+      return "yes";
+    }
+  }
+
+  return "No";
+}
+
+testLogicalAnd(10);
+
+//2nd method
+function testLogicalAnd(val) {
+  if (val <= 50 && val >= 25) {
+    return "yes";
+  }
+
+  return "No";
+}
+
+console.log(testLogicalAnd(10));
+
+//Comparison with the logical or operator
+
+function testLogicalOr(val) {
+  if (val < 10) {
+    return "Outside";
+  }
+
+  if (val > 20) {
+    return "Outside";
+  }
+
+  return "Inside";
+}
+
+//2nd method
+
+function testLogicalOr(val) {
+  if (val < 10 || val > 20) {
+    return "Outside";
+  }
+
+  return "Inside";
+}
+
+console.log(testLogicalOr(22));
+
+//Else Statement
+
+function testElse(val) {
+  var result = "";
+
+  if (val > 5) {
+    result = "Bigger than 5";
+  } else {
+    result = "5 or Smaaller";
+  }
+
+  return result;
+}
+
+console.log(testElse(5));
+
+//Else if statement
+
+function testElseIF(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 10";
+  }
+}
+
+console.log(testElseIF(7));
+
+//Logical Order in If Else statement
+
+function orderMyLogic(val) {
+  if (val > 5) {
+    return "Less than 10";
+  } else if (val < 10) {
+    return "Less than 5";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+console.log(orderMyLogic(7));
+
+//Chaining If Else statement
+
+function testSize(num) {
+  if (num < 5) {
+    return "Tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "medium";
+  } else if (num < 20) {
+    return "Large";
+  } else return "huge";
+}
+
+console.log(testSize(19));
