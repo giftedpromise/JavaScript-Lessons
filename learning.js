@@ -477,3 +477,65 @@ function ourFunctionWithArgs(a, b) {
   console.log(a - b);
 }
 ourFunctionWithArgs(10, 5);
+
+//2nd example
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+
+functionWithArgs(12, 6);
+
+//Global scope and function
+//Scope refers to the visibility of vaiables. Variable whic are found outside function block have global scope. Global scope can be seen everywhere in your JavaScript code.
+
+// Declare your variable here
+var myGlobal = 10;
+
+function fun1() {
+  //Assign 5 to oopsGlobal Here
+  oopsGlobal = 5;
+}
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+
+  if (typeof oopsGlobalGlobal != "undefined") {
+    output += "oopsGlobal: " + oopsGlobal;
+  }
+
+  console.log(output);
+}
+
+fun1();
+fun2();
+
+//Local Scope and functions: Variable which are declared within a function as well as the function parameter has local scope. That means that they can be visible from within the function.
+
+function myLocalScope() {
+  var myNum = 5;
+  console.log(myNum);
+}
+
+myLocalScope();
+
+//Global vs. Local Scope in function
+var outerWear = "T-shirt";
+
+function myOutfit() {
+  var outerWear = "Sweater";
+  return outerWear;
+}
+
+console.log(myOutfit());
+console.log(outerWear);
+
+//Return a value from a function with return: you can return a value from a function with the return statement.
+
+function minusSeven(num) {
+  return num - 7;
+}
+
+console.log(minusSeven(10));
