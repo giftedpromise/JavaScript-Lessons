@@ -1434,7 +1434,7 @@ console.log(i, myArray);
 //profile lookup
 
 // Setup
-const contacts = [
+var contacts = [
   {
     firstName: "Akira",
     lastName: "Laine",
@@ -1470,5 +1470,107 @@ function lookUpProfile(name, prop) {
   return "No such contact";
 }
 
-var data = lookUpProfile("Akira", "likes");
-console.log(data("Kristian", "likes"));
+lookUpProfile("Akira", "likes");
+console.log(lookUpProfile("Kristian", "likes"));
+
+//Generate Random fractions
+
+function randomFraction() {
+  return Math.random();
+}
+
+console.log(randomFraction());
+
+//Gen(erate Random whole numbers
+
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+console.log(randomWholeNum());
+
+//Generate random whole number within a range
+
+function ourRandomRange(ourMin, ourMax) {
+  return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+var ourRandom = ourRandomRange(1, 9);
+console.log(ourRandom);
+
+//2nd example
+function myRandomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+var myRandom = myRandomRange(5, 15);
+console.log(myRandom);
+
+//Use the parseInt function
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+console.log(convertToInteger("56"));
+
+//Use the parseInt function with a Radix
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+console.log(convertToInteger("10011"));
+
+//Use the conditional (ternary) operator
+function checkEqual(a, b) {
+  return a === b ? true : false;
+}
+
+console.log(checkEqual(1, 2));
+
+//Use the Multiple conditional (ternary) operator
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+console.log(checkSign(10));
+
+//Difference between the var and let keyword
+//"use strict" - catches coding mistakes.
+//You can declare var multiple times with the same variable name but you cannot declare let or constant multiple times in the same scope.
+
+//Compare scopes of the var and let keywords
+//The var keyword can be accessed anywhere within the scope while the let and const can only be accessed from the scope where it is declared.
+
+//Declare a Read-Only Variable with the const Keyword: if you declare a variable with a const keyword, you cannot reassign it afterward. Const allows the use of capital letters.
+
+//Mutate an Array Declared with const
+
+const s = [5, 7, 2];
+function editInPlace() {
+  "use strict";
+
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+}
+
+console.log(s);
+
+//Prevent Object Mutation: object.freeze prevent mutation of the object.
+function freezeObj() {
+  "use strict";
+  const MATHS_CONSTANTS = {
+    PI: 3.14,
+  };
+
+  Object.freeze(MATHS_CONSTANTS);
+
+  try {
+    MATHS_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+  return MATHS_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
