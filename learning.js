@@ -937,3 +937,409 @@ function switchOfStuff(val) {
 }
 
 console.log(switchOfStuff("b"));
+
+//Multiple Identical options in switch statement
+
+function sequentialSizes(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "high";
+      break;
+  }
+  return answer;
+}
+
+console.log(sequentialSizes(3));
+
+//Replacing if Else chains with switch
+function chainToSwitch(val) {
+  var answer = "";
+
+  switch (val) {
+    case "bob":
+      answer = "Marley";
+      break;
+
+    case 42:
+      answer = "The answer";
+      break;
+
+    case 1:
+      answer = "There is no #1";
+      break;
+
+    case 99:
+      answer = "Missed me by this much!";
+      break;
+    case 7:
+      answer = "Ate Nine";
+  }
+  return answer;
+}
+
+console.log(chainToSwitch("bob"));
+
+//Returning Boolean Valuea from Functions
+
+function isLess(a, b) {
+  return a < b;
+}
+
+console.log(isLess(20, 15));
+
+//Returning Early Pattern from functions
+
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined;
+  }
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(-2, 2));
+
+//Counting cards
+var count = 0;
+function cc(card) {
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+
+  var holdbet = "Hold";
+  if (count > 0) {
+    holdbet = "Bet";
+  }
+
+  return count + " " + holdbet;
+}
+
+cc(2);
+cc("K");
+cc(10);
+cc("K");
+cc("A");
+console.log(cc(4));
+
+//Build JavaScript Object
+
+var ourDog = {
+  name: "Camper",
+  Legs: 4,
+  tails: 1,
+  friends: ["everything"],
+};
+
+//2nd example
+var myDog = {
+  name: "Quincy",
+  legs: 3,
+  tails: 1,
+  friends: [],
+};
+
+console.log(myDog);
+
+//Accesing object properties with Dot Notation
+
+var testObj = {
+  hat: "ballcal",
+  shirt: "jersey",
+  shoes: "cleats",
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+//Accesing object properties with bracket Notation
+
+var testObj = {
+  "a hat": "ballcal",
+  "my  shirt": "jersey",
+  "our shoes": "cleats",
+};
+
+var hatValue = testObj["a hat"];
+var shirtValue = testObj["my shirt"];
+
+//Accesing object properties with Variables
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas",
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+
+//updating object properties
+
+var ourDog = {
+  name: "Camper",
+  Legs: 4,
+  tails: 1,
+  friends: ["everything"],
+};
+
+ourDog.name = "Happy Camper";
+
+console.log(ourDog);
+
+//2nd example
+var myDog = {
+  name: "Quincy",
+  legs: 3,
+  tails: 1,
+  friends: [],
+};
+
+myDog.name = "Goat";
+
+//Add new property to an object
+
+var ourDog = {
+  name: "Camper",
+  Legs: 4,
+  tails: 1,
+  friends: ["everything"],
+};
+
+ourDog.bark = "waa waa";
+
+//2nd example
+var myDog = {
+  name: "Quincy",
+  legs: 3,
+  tails: 1,
+  friends: [],
+};
+
+myDog["bark"] = "waa waa";
+
+console.log(myDog);
+
+//Delete property to an object
+
+var ourDog = {
+  name: "Camper",
+  Legs: 4,
+  tails: 1,
+  friends: ["everything"],
+};
+
+ourDog.bark = "waa waa";
+
+//2nd example
+var myDog = {
+  name: "Quincy",
+  legs: 3,
+  tails: 1,
+  friends: [],
+};
+
+delete myDog.tails;
+
+console.log(myDog);
+
+//Using Objects for lookups
+
+function phoneticLookup(val) {
+  var result = "";
+
+  var lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank",
+  };
+
+  result = lookup[val];
+
+  return result;
+}
+
+console.log(phoneticLookup("charlie"));
+
+//Testing Objects for properties
+
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh",
+};
+
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  } else {
+    return "Not found";
+  }
+}
+
+console.log(checkObj("bag"));
+
+//Manipulating Complex Objects
+
+var myMusic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CS", "8T", "LP"],
+    gold: true,
+  },
+
+  {
+    artist: "Promise Nwankwo",
+    title: "Piano Woman",
+    release_year: 1992,
+    formats: ["Youtube video", "8T", "LP"],
+    gold: false,
+  },
+];
+
+//Accessing Nested Objects
+
+var myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+//Accessing Nested Arrays
+
+var myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
+
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+//Record collection
+
+var collection = {
+  2548: {
+    albumTitle: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+  },
+  2468: {
+    albumTitle: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [],
+  },
+  5439: {
+    albumTitle: "ABBA Gold",
+  },
+};
+
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecord(id, prop, value) {
+  if (value === "") {
+    delete collection[id][prop];
+  } else if (prop === "tracks") {
+    collection[id][prop] || [];
+    collection[id][prop].push(value);
+  } else {
+    collection[id][prop] = value;
+  }
+  return collection;
+}
+
+console.log(updateRecord(2468, "tracks", "test"));
+
+console.log(updateRecord(5439, "artist", "ABBA"));
+
+//Iterate with while loops: Loops allows you to run the same code multiple times.
+//While loop runs a specified condition when it is true and stop when it is no longer true.
+
+var myArray = [];
+var i = 0;
+while (i < 10) {
+  myArray.push(i);
+  i++;
+}
+
+console.log(myArray);
+
+//Iterate with for loops: it breaks out of the loop once the condition becomes false.
+
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+//2nd example
+
+var myArray = [];
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+
+console.log(myArray);
+
+//Iterate Odd Numbers with a for loop
+
+var ourArray = [];
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+console.log(ourArray);
+
+var myArray = [];
+for (var i = 0; i < 20; i += 2) {
+  myArray.push(i);
+}
+
+console.log(myArray);
