@@ -1574,3 +1574,43 @@ function freezeObj() {
 }
 
 const PI = freezeObj();
+
+//Use Arrow functions to write concise anonymous functions
+const magic = () => new Date();
+
+//Write arrow function with parameters
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+//Write Higher order Arrow Functions
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squareList = (arr) => {
+  const squaredIntegers = arr
+    .filter((num) => Number.isInteger(num) && num > 0)
+    .map((x) => x * x);
+  return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+//Example 2
+const increment = (function () {
+  return function increment(number, value = 1) {
+    return number + value;
+  };
+})();
+
+console.log(increment(5, 2));
+console.log(increment(5));
+
+//Use the rest Operator with function parameters
+//The rest operator allows you to create a function that takes a number of arguements. The rest operator is 3 dots.
+var sum = (function () {
+  return function sum(...args) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3));
