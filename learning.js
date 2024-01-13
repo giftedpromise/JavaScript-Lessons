@@ -1614,3 +1614,181 @@ var sum = (function () {
   };
 })();
 console.log(sum(1, 2, 3));
+
+//Use the spread Operator to evaluate Arrays in-place
+//The spread operator is just like the rest operator but it spans in already existing array.
+
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+(function () {
+  arr2 = [...arr1];
+  arr1[0] = "potato";
+})();
+
+console.log(arr2);
+
+//Use destructuring Assignment to assign vriables from objects
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+
+var { x: a, y: b, z: c } = voxel;
+
+const avg_temperatures = {
+  today: 77.5,
+  tomorrow: 79,
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  "use strict";
+
+  var { tomorrow: tempOfTomorrow } = avgTemperatures;
+
+  return tempOfTomorrow;
+}
+
+console.log(getTempOfTmrw(avg_temperatures));
+
+//Destructuring Assignment with Nested Objects
+
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 },
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+
+  const {
+    tomorrow: { max: maxOfTomorrow },
+  } = LOCAL_FORECAST; // change this line
+
+  return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+
+//Use destructuring Assignment to Assign Variables from Arrays
+var [z, x] = [1, 2, 3, 4, 5, 6];
+console.log(z, x);
+
+var a = 8,
+  b = 6;
+(() => {
+  "use strict";
+})();
+console.log(a);
+console.log(b);
+
+//Use Destructuring Assignment with the rest Operator
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  "use strict";
+
+  const [a, b, ...arr] = list;
+
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
+console.log(source);
+
+//use Destructuring Assignment to pass an Object as a function's parameters
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85,
+};
+const half = (function () {
+  "use strict";
+
+  return function half(stats) {
+    // use function argument destructuring
+    return (stats.max + stats.min) / 2.0;
+  };
+})();
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+
+//Create Temperal literals
+
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56,
+};
+
+const greeting = `Hello, my name is ${person.name}! I am ${person.age} years old.`;
+
+console.log(greeting);
+
+//Write concise Object literal declarations using simple fields
+const createPerson = (name, age, gender) => ({ name, age, gender });
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+
+//Write Concise Declarative functions
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  },
+};
+
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+//use class syntax to define a constructor function
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+
+var zeus = new SpaceShuttle("Jupiter");
+
+console.log(zeus.targetPlanet);
+
+//Example 2nd
+function makeClass() {
+  "use strict";
+  /* Alter code below this line */
+  class Vegetable {
+    constructor(vegetable) {
+      return this.vegetable;
+    }
+  }
+  /* Alter code above this line */
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable("carrot");
+console.log(carrot.name); // => should be 'carrot'
+
+//use getters and setters to control access to an object
+class Thermostat {
+  constructor(temperature) {
+    this._temperature = temperature;
+  }
+
+  get temperature() {
+    return (5 / 9) * (this._temperature - 32); // return in C
+  }
+
+  set temperature(tempCels) {
+    this._temperature = (tempCels * 9) / 5 + 32; // convert C -> F
+  }
+}
+
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in C
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C
+
+console.log(temp);
+
+//Starting a variable with underscore indicates that it's a private variable and you can't access the variable outside the scope.
