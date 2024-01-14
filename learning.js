@@ -1755,19 +1755,6 @@ var zeus = new SpaceShuttle("Jupiter");
 console.log(zeus.targetPlanet);
 
 //Example 2nd
-function makeClass() {
-  "use strict";
-  /* Alter code below this line */
-  class Vegetable {
-    constructor(vegetable) {
-      return this.vegetable;
-    }
-  }
-  /* Alter code above this line */
-}
-const Vegetable = makeClass();
-const carrot = new Vegetable("carrot");
-console.log(carrot.name); // => should be 'carrot'
 
 //use getters and setters to control access to an object
 class Thermostat {
@@ -1792,3 +1779,10 @@ temp = thermos.temperature; // 26 in C
 console.log(temp);
 
 //Starting a variable with underscore indicates that it's a private variable and you can't access the variable outside the scope.
+
+//Spread Operator
+//The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+const numberOne = [1, 2, 3, 4, 5];
+const numberTwo = [6, 7, 8, 9, 10];
+const numbersCombined = [...numberOne, ...numberTwo];
+console.log(numbersCombined);
