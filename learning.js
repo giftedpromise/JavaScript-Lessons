@@ -1786,3 +1786,22 @@ const numberOne = [1, 2, 3, 4, 5];
 const numberTwo = [6, 7, 8, 9, 10];
 const numbersCombined = [...numberOne, ...numberTwo];
 console.log(numbersCombined);
+
+//function
+function toCelsius(f) {
+  return (5 / 9) * (f - 32);
+}
+
+let C = toCelsius(77);
+let text = "The temperature " + C + " Celsius.";
+console.log(text);
+
+const person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullname: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+console.log(person1.fullname());

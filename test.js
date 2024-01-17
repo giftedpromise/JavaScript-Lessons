@@ -30,6 +30,11 @@ let str = "Hello";
 let str2 = "Single quotes are ok too";
 let phrase = `can embed another ${str}`;
 
+let userName = "Promise";
+let myName = "Gift";
+let str3 = myName + userName;
+console.log(str3);
+
 //3. Boolean: The boolean type has only two values: true and false.
 
 let nameFieldChecked = true; // yes, name field is checked
