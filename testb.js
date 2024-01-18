@@ -52,3 +52,11 @@ console.log(myAge());
 let weather = false;
 let isWeather = weather ? "yes, there is weather" : "There is no weather";
 console.log(isWeather);
+
+const cars = [];
+cars[0] = "Benz";
+cars[1] = "Toyota";
+cars[2] = "Honda";
+cars[3] = "Hyundia";
+
+console.log(cars);
