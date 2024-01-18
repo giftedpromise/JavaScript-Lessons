@@ -60,3 +60,16 @@ cars[2] = "Honda";
 cars[3] = "Hyundia";
 
 console.log(cars);
+let car = cars[0];
+console.log(car);
+let length = cars.length;
+console.log(length);
+//Changing an Array Element
+
+cars[1] = "Wagon";
+
+console.log(cars);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[fruits.length - 2];
+console.log(fruit);
