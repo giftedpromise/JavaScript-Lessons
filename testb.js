@@ -19,6 +19,36 @@ let userNames = ["Malik", "Mustapha", "Ruth", "Gift"];
 userNames.pop([0]);
 console.log(userNames);
 
-for (let i = 1; i <= 10; i++) {
+//for (i = 1; i <= 10; i++) {
+//  for (let i = 1; i <= 10; i++) {
+// console.log(i);
+// }
+
+/*let i = 1;
+while (i < 11) {
   console.log(i);
+  i++;
 }
+
+var myBook = "Math books";
+
+function myAge() {
+  let age = 32;
+  console.log(age);
+} */
+
+let age = 26;
+
+let myAge = () => {
+  if (age > 25) {
+    return "true";
+  } else {
+    return "false";
+  }
+};
+
+console.log(myAge());
+
+let weather = false;
+let isWeather = weather ? "yes, there is weather" : "There is no weather";
+console.log(isWeather);

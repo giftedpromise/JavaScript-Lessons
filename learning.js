@@ -1805,3 +1805,9 @@ const person1 = {
   },
 };
 console.log(person1.fullname());
+
+const myButton = document.getElementById("myButton");
+
+myButton.addEventListener("click", function () {
+  alert("Button clicked");
+});
