@@ -93,11 +93,12 @@ for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
 
-const cars = ["BMW", "Volvo", "Saab", "Ford"];
+const motto = ["BMW", "Volvo", "Saab", "Ford"];
 let i = 2;
-let len = cars.length;
+let len = motto.length;
 let text = "";
 
 for (; i < len; i++) {
-  text += cars[i] + "<br>";
+  text += motto[i] + "<br>";
+  console.log(i);
 }
