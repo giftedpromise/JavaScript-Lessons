@@ -92,3 +92,12 @@ const array = [1, 2, 3, 4, 5];
 for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
+
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i = 2;
+let len = cars.length;
+let text = "";
+
+for (; i < len; i++) {
+  text += cars[i] + "<br>";
+}
