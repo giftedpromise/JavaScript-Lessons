@@ -72,4 +72,18 @@ console.log(cars);
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let fruit = fruits[fruits.length - 2];
-console.log(fruit);
+fruits.pop();
+console.log(fruits);
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren);
+
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+
+const arr4 = arr1.concat(arr2, arr3);
+console.log(arr4);
