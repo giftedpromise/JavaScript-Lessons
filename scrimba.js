@@ -2,6 +2,11 @@
 
 // 2. Log the myAge variable to the console
 
-var myAge = 32;
+let myAge = 32;
 
 console.log(myAge);
+
+let myAge = 32;
+let humanDogRatio = 12;
+let myDogAge = myAge * humanDogRatio;
+console.log(myDogAge);
