@@ -43,6 +43,26 @@ logLapTime();
 
 let lapsCompleted = 0;
 
+// intialize the count as 0
+// listen for clicks on the increment button
+// increment the count variable when the button is clicked (log it out)
+// change the count-el in the HTML to reflect the new count
+let countEl = document.getElementById("count-el");
+let count = 0;
+
+function increment() {
+  count = count + 1;
+  console.log(count);
+  countEl.innerText = count;
+}
+
+// 1. Create a function, save(), which logs out the count when it's called
+function save() {
+  console.log(count);
+}
+
+save();
+
 // Create a function that increments the lapsCompleted variable with one
 // Run it three times
 
