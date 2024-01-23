@@ -47,17 +47,20 @@ let lapsCompleted = 0;
 // listen for clicks on the increment button
 // increment the count variable when the button is clicked (log it out)
 // change the count-el in the HTML to reflect the new count
+let saveEl = document.getElementById("save-el");
 let countEl = document.getElementById("count-el");
 let count = 0;
 
 function increment() {
-  count = count + 1;
+  count += 1;
   console.log(count);
   countEl.innerText = count;
 }
 
 // 1. Create a function, save(), which logs out the count when it's called
 function save() {
+  let countStr = " " + count + " - ";
+  saveEl.innerText += countStr;
   console.log(count);
 }
 
