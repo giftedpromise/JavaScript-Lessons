@@ -61,7 +61,8 @@ function increment() {
 function save() {
   let countStr = " " + count + " - ";
   saveEl.innerText += countStr;
-  console.log(count);
+  countEl.innerText = 0;
+  count = 0;
 }
 
 save();

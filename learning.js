@@ -1811,3 +1811,9 @@ const myButton = document.getElementById("myButton");
 myButton.addEventListener("click", function () {
   alert("Button clicked");
 });
+
+let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
