@@ -1812,8 +1812,13 @@ myButton.addEventListener("click", function () {
   alert("Button clicked");
 });
 
-let text = "";
+let texta = "";
 
 for (let i = 0; i < 5; i++) {
-  text += "The number is " + i + "<br>";
+  texta += "The number is " + i + "<br>";
+}
+
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
 }
