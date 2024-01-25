@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: row;
+  align-items: center;
+}
+
+.left {
+  width: 50%;
+  text-align: center;
+}
+
+.right {
+  width: 50%;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 3rem;
+}
