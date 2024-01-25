@@ -49,3 +49,11 @@ console.log(6 + "5"); //65
 console.log("My points: " + 5 + 9); //my points: 59;
 console.log(2 + 2); // 4
 console.log("11" + "14"); //1114
+
+// that has the id="error".
+let errorParagrapgh = document.getElementById("error");
+
+function purchase() {
+  console.log("button clicked");
+  errorParagrapgh.innerText = "Something went wrong, please try again";
+}
