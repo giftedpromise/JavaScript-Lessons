@@ -69,6 +69,7 @@ console.log(message);
 
 let firstCard = 10;
 let secondCard = 11;
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -81,10 +82,13 @@ let cardsEl = document.getElementById("cards-el");
 
 // 2. Create a startGame() function. Move the conditional
 // below (line 11-20) inside the body of the function.
-
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   // 3. Render the cars on the page using this format -> "Cards: 10 4"
-  cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
+  cardsEl.innerText = "Cards: " + cards[0] + " " + cards[1];
   // 3. Render the sum on the page using this format -> "Sum: 14"s
   sumEl.textContent += sum;
 
@@ -99,4 +103,15 @@ function startGame() {
   }
   // 2. Display the message in the messageEl using messageEl.textContent
   messageEl.textContent = message;
+}
+
+// 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
+function newCard() {
+  console.log("Drawing a new card from the deck!");
+  // 1. Create a card variable, and hard code its value to a number (2-11)
+  let card = 7;
+  // 2. Add the new card to the sum variable
+  sum += card;
+  // 3. Call startGame()
+  renderGame();
 }
