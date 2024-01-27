@@ -70,7 +70,7 @@ let sumEl = document.getElementById("sum-el");
 function add() {
   let sum = num1 + num2;
 
-  sumEl.innerText += sum;
+  sumEl.innerText = "Sum:" + sum;
 }
 
 function subtract() {

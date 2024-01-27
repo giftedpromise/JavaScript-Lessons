@@ -3,7 +3,7 @@
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
-let firstCard = 6;
+/* let firstCard = 6;
 let secondCard = 9;
 
 let sum = firstCard + secondCard;
@@ -60,7 +60,43 @@ if (sum <= 20) {
 } else {
   message = "You're out of the game! 😭";
   isAlive = false;
-}
+} 
 
 // 3. Log it out!
 console.log(message);
+
+*/
+
+let firstCard = 10;
+let secondCard = 11;
+let sum = firstCard + secondCard;
+let hasBlackJack = false;
+let isAlive = true;
+let message = "";
+let messageEl = document.getElementById("message-el");
+// 2. Store the sum paragraph in a variable called sumEl
+let sumEl = document.getElementById("sum-el");
+// 2. Store the cards paragraph in a variable called cardsEl
+let cardsEl = document.getElementById("cards-el");
+
+// 2. Create a startGame() function. Move the conditional
+// below (line 11-20) inside the body of the function.
+
+function startGame() {
+  // 3. Render the cars on the page using this format -> "Cards: 10 4"
+  cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
+  // 3. Render the sum on the page using this format -> "Sum: 14"s
+  sumEl.textContent += sum;
+
+  if (sum <= 20) {
+    message = "Do you want to draw a new card?";
+  } else if (sum === 21) {
+    message = "Wohoo! You've got Blackjack!";
+    hasBlackJack = true;
+  } else {
+    message = "You're out of the game!";
+    isAlive = false;
+  }
+  // 2. Display the message in the messageEl using messageEl.textContent
+  messageEl.textContent = message;
+}
