@@ -161,13 +161,52 @@ for (let i = 0; i < sentence.length; i++) {
     greetingEl.textContent += sentence[i]
 }
 
+let player1Time = 102
+let player2Time = 107
+
+// cmd+d - ctrl+d
+function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    } else if (player2Time < player1Time) {
+        return player2Time
+    } else {
+        return player1Time
+    }
+}
+
+// let fastestRace = getFastestRaceTime()
+// console.log(fastestRace)
+
+// Write a function that returns the total race time
+
+// Call/invoke the function and store the returned value in a new variable
+// Finally, log the variable out
+function totalRaceTime() {
+  return player1Time + player2Time  
+}
+
+let totalTime = totalRaceTime()
+console.log(totalTime)
+
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+
+function rollDice() {
+    let randomNumber = Math.floor( Math.random() * 6 ) + 1
+    return randomNumber
+}
+
+console.log( rollDice() )
+
+
 
 
 
 */
 
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -178,6 +217,19 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 // 2. Store the cards paragraph in a variable called cardsEl
 let cardsEl = document.getElementById("cards-el");
+
+// Make this function return a random number between 1 and 13
+
+function getRandomCard() {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+  if (randomNumber > 10) {
+    return 10;
+  } else if (randomNumber === 1) {
+    return 11;
+  } else {
+    return randomNumber;
+  }
+}
 
 // 2. Create a startGame() function. Move the conditional
 // below (line 11-20) inside the body of the function.
@@ -194,7 +246,7 @@ function renderGame() {
   }
 
   // 3. Render the sum on the page using this format -> "Sum: 14"s
-  sumEl.textContent += sum;
+  sumEl.textContent = "Sum: " + sum;
 
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
@@ -213,7 +265,7 @@ function renderGame() {
 function newCard() {
   console.log("Drawing a new card from the deck!");
   // 1. Create a card variable, and hard code its value to a number (2-11)
-  let card = 7;
+  let card = getRandomCard();
   // 2. Add the new card to the sum variable
   sum += card;
 
