@@ -199,18 +199,44 @@ function rollDice() {
 
 console.log( rollDice() )
 
+// Create two boolean variables, likesDocumentaries and likesStartups
+// Use an OR statement (||) to call recommendMovie() if either of those variables are true
 
+let likesDocumentaries = true;
+let likesStartups = false;
+
+if (likesDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+
+
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}
+
+// Create an object that represents an airbnb castle listing.
+// It should contain at least one boolean, one string, one number, and one array
+// Log out at least two of the keys using the dot notation
+
+let castle = {
+    title: "Live like a king in my castle",
+    price: 190,
+    isSuperHost: true,
+    images: ["img/castle1.png", "img/caste2.png"]
+}
+
+console.log(castle.price)
+console.log(castle.isSuperHost)
 
 
 
 */
 
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
+
 let message = "";
 let messageEl = document.getElementById("message-el");
 // 2. Store the sum paragraph in a variable called sumEl
@@ -234,6 +260,12 @@ function getRandomCard() {
 // 2. Create a startGame() function. Move the conditional
 // below (line 11-20) inside the body of the function.
 function startGame() {
+  isAlive = true;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
+
   renderGame();
 }
 
@@ -263,15 +295,10 @@ function renderGame() {
 
 // 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
-  console.log("Drawing a new card from the deck!");
-  // 1. Create a card variable, and hard code its value to a number (2-11)
-  let card = getRandomCard();
-  // 2. Add the new card to the sum variable
-  sum += card;
-
-  // Push the card to the cards array
-  cards.push(card);
-  // 3. Call startGame()
-
-  renderGame();
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    renderGame();
+  }
 }
