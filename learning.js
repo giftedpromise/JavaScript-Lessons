@@ -1834,3 +1834,11 @@ if (time < 10) {
 for (let i = 0; i < cars.length; i++) {
   text += cars[i] + "<br>";
 }
+
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
