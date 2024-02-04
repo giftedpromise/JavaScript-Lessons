@@ -73,9 +73,31 @@ function buy() {
 const recipient = "James"
 
 // Refactor the email string to use template strings
+// Create a new variable, sender, and set its value to your name
+const sender = "Promise"
+// Use your sender variable instead of "Per"
+
 const email = `Hey   ${recipient} ! How is it going? Cheers Per`
 
 console.log(email)
+
+const credits = 0
+
+if (credits) {
+    console.log("Let's play 🎰")
+} else {
+    console.log("Sorry, you have no credits 😭")
+}
+
+// truthy
+// falsy
+
+// false
+// 0
+// ""
+// null
+// undefined
+// NaN
 */
 
 let myLeads = [];
