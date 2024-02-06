@@ -127,6 +127,36 @@ function add(num1, num2) {
 
 console.log( add(3, 4)   ) // should log 7
 console.log( add(9, 102) ) // should log 111
+
+function function getFirst(arr) {
+    return arr[0]
+}
+
+getFirstCard = getFirst([0, 1, 2, 10])
+console.log(getFirstCard)
+
+// SETTING THE STAGE
+const player = "Per"
+const opponent = "Nick"
+const game = "AmazingFighter"
+
+let points = 0
+let hasWon = false
+
+// PLAYING THE GAME
+points += 100
+hasWon = true
+
+// ANNOUNCING THE WINNER
+if (hasWon) {
+    console.log(`${player} got ${points} points and won the ${game} game!`)
+} else {
+    console.log(`The winner is ${opponent}! ${player} lost the game`)
+}
+
+// Go through all variables and decide if they should be let or const
+// Change the console logs to use template strings instead of double quotes
+
 */
 
 let myLeads = [];
