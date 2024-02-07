@@ -157,6 +157,58 @@ if (hasWon) {
 // Go through all variables and decide if they should be let or const
 // Change the console logs to use template strings instead of double quotes
 
+let myCourses = ["Learn CSS Animations", "UI Design Fundamentals", "Intro to Clean Code"]
+
+// Create a function that takes a single parameter, an array,
+// and logs all the items of the array to the console.
+// Call the function while passing in myCourses as an argument
+
+function logItems(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+}
+
+logItems(myCourses)
+
+let data = [
+    {
+        player: "Jane",
+        score: 52
+    }, 
+    {
+        player: "Mark",
+        score: 41
+    }
+]
+
+const janeBtn = document.getElementById("jane-btn")
+
+janeBtn.addEventListener("click", function() {
+    console.log(data[0]);
+})
+
+// Fetch the button from the DOM, store it in a variable
+// Use addEventListener() to listen for button clicks
+// Log Jane's score when the button is clicked (via data)
+
+
+// Challenge:
+// Round the price in the button down to two decimal places.
+// Don't know which method to use? Google it!
+
+const totalPrice = 420.69235632455
+const btn = document.getElementById("purchase-btn")
+btn.textContent = `Buy €${ totalPrice.toFixed(2) }`
+
+// Challenge:
+// The toFixed() method doesn't work anymore. Can you make it work?
+// Google the error message if you're unsure about how to do it
+
+const totalPrice = "420.69235632455"
+const btn = document.getElementById("buy-btn")
+btn.textContent = `Buy €${ Number(totalPrice).toFixed(2) }`
+
 */
 
 let myLeads = [];
